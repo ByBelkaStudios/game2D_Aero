@@ -97,17 +97,68 @@ public class NoteClick : MonoBehaviour
 
     private void ClickBellow(InputAction.CallbackContext context)
     {
-        
+        var distance = Mathf.Abs(noteGroupAbove.transform.GetChild(0).position.y - targetPositionAbove.position.y);
+
+        Debug.Log(distance);
+
+        if (distance <= distanceLimit)
+        {
+            scoreMultiplier += scoreMultiplierIncrease;
+            combo++;
+
+            UpdateScore(1);
+
+            return;
+        }
+
+        scoreMultiplier = scoreMultiplerDefault;
+        combo = 0;
+
+        UpdateScore(0);
     }
 
     private void ClickLeft(InputAction.CallbackContext context) 
     {
+        var distance = Mathf.Abs(noteGroupAbove.transform.GetChild(0).position.x - targetPositionAbove.position.x);
 
+        Debug.Log(distance);
+
+        if (distance <= distanceLimit)
+        {
+            scoreMultiplier += scoreMultiplierIncrease;
+            combo++;
+
+            UpdateScore(1);
+
+            return;
+        }
+
+        scoreMultiplier = scoreMultiplerDefault;
+        combo = 0;
+
+        UpdateScore(0);
     }
 
     private void ClickRight(InputAction.CallbackContext context)
     {
-        
+        var distance = Mathf.Abs(noteGroupAbove.transform.GetChild(0).position.x - targetPositionAbove.position.x);
+
+        Debug.Log(distance);
+
+        if (distance <= distanceLimit)
+        {
+            scoreMultiplier += scoreMultiplierIncrease;
+            combo++;
+
+            UpdateScore(1);
+
+            return;
+        }
+
+        scoreMultiplier = scoreMultiplerDefault;
+        combo = 0;
+
+        UpdateScore(0);
     }
 
     private void UpdateScore(int hit)
