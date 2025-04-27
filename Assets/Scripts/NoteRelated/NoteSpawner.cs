@@ -1,6 +1,9 @@
 using System;
+using System.Collections;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Windows;
 
 public class NoteSpawner : MonoBehaviour
 {
@@ -30,10 +33,13 @@ public class NoteSpawner : MonoBehaviour
 
     private float stepDuration;
 
+    private string[] chartLines;
+
     private void Awake()
     {
         if (stepSubdivision % 4 != 0)
         {
+            //go back to menu, change throw
             throw new InvalidOperationException($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
         }
 
@@ -43,6 +49,20 @@ public class NoteSpawner : MonoBehaviour
 
     private void Start()
     {
+        var stringVar = gameObject.GetComponent<ChartReader>().ReadFile();
+        if (stringVar.Length < 1)
+        {
+            return;
+        }
+
+        StartCoroutine(WaitSong());
+
+        //chartLines = gameObject.GetComponent<ChartReader>().ReadFile();
+    }
+
+    private IEnumerator WaitSong()
+    {
+        yield return new WaitForSeconds(5f);
         myAudioSource.Play();
     }
 
@@ -96,10 +116,38 @@ public class NoteSpawner : MonoBehaviour
 
         if (songCurrentStep > prevGenStep)
         {
+            char[] characters = stringVar[songCurrentStep].ToCharArray();
+            for (int i = 0; i < characters.Length; i++)
+            {
+                if (characters[i] == 'x')
+                {
+
+                    //change to switch + default case
+                    if(i == 0)
+                    {
+                        SpawnAbove();
+                    }
+                    if(i == 1)
+                    {
+                        SpawnBellow();
+                    }
+                    if(i == 2)
+                    {
+                        SpawnLeft();
+                    }
+                    if(i == 3)
+                    {
+                        SpawnRight();
+                    }
+                }
+            }
+
+            /*
             SpawnAbove();
             SpawnBellow();
             SpawnLeft();
             SpawnRight();
+            */
 
             prevGenStep = songCurrentStep;
         }

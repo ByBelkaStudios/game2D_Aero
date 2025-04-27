@@ -12,12 +12,21 @@ public class InputManager : MonoBehaviour
         {
             Instance = this;
             gameInputActions = new InputSystem_Actions();
-            gameInputActions.Enable();
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnEnable()
+    {
+        gameInputActions.Enable();
+    }
+
+    private void OnDisable()
+    {
+        gameInputActions.Disable();
     }
 
     public InputAction GetClickAboveAction()

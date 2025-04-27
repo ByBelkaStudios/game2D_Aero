@@ -47,8 +47,6 @@ public class NoteMovement : MonoBehaviour
                     targetPos = startPos + moveDirection * 1.5f;
                     timeToReachEnd = timeToReachEnd / 4f;
                 }
-
-                Debug.Log(percentageComplete);
             }
             else
             {

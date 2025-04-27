@@ -35,11 +35,11 @@ public class NoteClick : MonoBehaviour
     private int score = 0;
     private int combo = 0;
 
-    private float scoreMultiplier = 1.00f;
-    private float scoreMultiplierIncrease = 0.25f;
-    private float scoreMultiplerDefault = 1.00f;
+    [SerializeField] private float scoreMultiplier = 1.00f;
+    [SerializeField] private float scoreMultiplierIncrease = 0.25f;
+    [SerializeField] private float scoreMultiplerDefault = 1.00f;
 
-    private void Awake()
+    private void Start()
     {
         clickAboveAction = InputManager.Instance.GetClickAboveAction();
         clickAboveAction.Enable();
