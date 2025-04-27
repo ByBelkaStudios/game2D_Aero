@@ -40,7 +40,8 @@ public class NoteSpawner : MonoBehaviour
         if (stepSubdivision % 4 != 0)
         {
             //go back to menu, change throw
-            throw new InvalidOperationException($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
+            Debug.LogError($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
+            stepSubdivision = 4;
         }
 
         stepSubdivision = stepSubdivision / 4;
@@ -52,12 +53,13 @@ public class NoteSpawner : MonoBehaviour
         var stringVar = gameObject.GetComponent<ChartReader>().ReadFile();
         if (stringVar.Length < 1)
         {
+            Debug.LogError("Song file is empty.");
             return;
         }
 
         StartCoroutine(WaitSong());
 
-        //chartLines = gameObject.GetComponent<ChartReader>().ReadFile();
+        chartLines = stringVar;
     }
 
     private IEnumerator WaitSong()
@@ -109,45 +111,44 @@ public class NoteSpawner : MonoBehaviour
     int prevGenStep = -1;
     private void Update()
     {
-        //using myAudioSource.time might not be precise (to check)
         enlapsedTime = myAudioSource.time;
 
         songCurrentStep = (int)Mathf.Floor(enlapsedTime / stepDuration);
 
         if (songCurrentStep > prevGenStep)
         {
-            char[] characters = stringVar[songCurrentStep].ToCharArray();
+            if(songCurrentStep > chartLines.Length)
+            {
+                Debug.LogError("Beatmat ended, song will be stopped");
+                myAudioSource.Stop();
+                return;
+            }
+            char[] characters = chartLines[songCurrentStep].ToCharArray();
+
             for (int i = 0; i < characters.Length; i++)
             {
                 if (characters[i] == 'x')
                 {
-
-                    //change to switch + default case
-                    if(i == 0)
+                    switch (i)
                     {
-                        SpawnAbove();
-                    }
-                    if(i == 1)
-                    {
-                        SpawnBellow();
-                    }
-                    if(i == 2)
-                    {
-                        SpawnLeft();
-                    }
-                    if(i == 3)
-                    {
-                        SpawnRight();
+                        case 0:
+                            SpawnAbove();
+                            break;
+                        case 1:
+                            SpawnBellow();
+                            break;
+                        case 2:
+                            SpawnLeft();
+                            break;
+                        case 3:
+                            SpawnRight();
+                            break;
+                        default:
+                            Debug.LogError("Beatmeat written incorrectly at step: " + songCurrentStep);
+                            break;
                     }
                 }
             }
-
-            /*
-            SpawnAbove();
-            SpawnBellow();
-            SpawnLeft();
-            SpawnRight();
-            */
 
             prevGenStep = songCurrentStep;
         }

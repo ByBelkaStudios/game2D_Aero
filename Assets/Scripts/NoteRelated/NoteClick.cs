@@ -75,9 +75,12 @@ public class NoteClick : MonoBehaviour
 
     private void ClickAbove(InputAction.CallbackContext context)
     {
-        var distance = Mathf.Abs(noteGroupAbove.transform.GetChild(0).position.y - targetPositionAbove.position.y);
+        if (noteGroupAbove.transform.childCount == 0)
+        {
+            return;
+        }
 
-        Debug.Log(distance);
+        var distance = Mathf.Abs(noteGroupAbove.transform.GetChild(0).position.y - targetPositionAbove.position.y);
 
         if(distance <= distanceLimit)
         {
@@ -97,9 +100,13 @@ public class NoteClick : MonoBehaviour
 
     private void ClickBellow(InputAction.CallbackContext context)
     {
-        var distance = Mathf.Abs(noteGroupAbove.transform.GetChild(0).position.y - targetPositionAbove.position.y);
+        if (noteGroupBellow.transform.childCount == 0)
+        {
+            return;
+        }
 
-        Debug.Log(distance);
+        var distance = Mathf.Abs(noteGroupBellow.transform.GetChild(0).position.y - targetPositionAbove.position.y);
+
 
         if (distance <= distanceLimit)
         {
@@ -119,9 +126,12 @@ public class NoteClick : MonoBehaviour
 
     private void ClickLeft(InputAction.CallbackContext context) 
     {
-        var distance = Mathf.Abs(noteGroupAbove.transform.GetChild(0).position.x - targetPositionAbove.position.x);
+        if (noteGroupLeft.transform.childCount == 0)
+        {
+            return;
+        }
 
-        Debug.Log(distance);
+        var distance = Mathf.Abs(noteGroupLeft.transform.GetChild(0).position.x - targetPositionAbove.position.x);
 
         if (distance <= distanceLimit)
         {
@@ -141,9 +151,12 @@ public class NoteClick : MonoBehaviour
 
     private void ClickRight(InputAction.CallbackContext context)
     {
-        var distance = Mathf.Abs(noteGroupAbove.transform.GetChild(0).position.x - targetPositionAbove.position.x);
+        if (noteGroupRight.transform.childCount == 0)
+        {
+            return;
+        }
 
-        Debug.Log(distance);
+        var distance = Mathf.Abs(noteGroupRight.transform.GetChild(0).position.x - targetPositionAbove.position.x);
 
         if (distance <= distanceLimit)
         {
