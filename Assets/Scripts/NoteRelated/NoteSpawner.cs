@@ -35,11 +35,13 @@ public class NoteSpawner : MonoBehaviour
 
     private string[] chartLines;
 
+    private bool songPlaying = false;
+
     private void Awake()
     {
         if (stepSubdivision % 4 != 0)
         {
-            //go back to menu, change throw
+            //Go back to menu
             Debug.LogError($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
             stepSubdivision = 4;
         }
@@ -66,6 +68,7 @@ public class NoteSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         myAudioSource.Play();
+        songPlaying = true;
     }
 
     private void SpawnAbove()
@@ -115,14 +118,16 @@ public class NoteSpawner : MonoBehaviour
 
         songCurrentStep = (int)Mathf.Floor(enlapsedTime / stepDuration);
 
-        if (songCurrentStep > prevGenStep)
+        if (songPlaying == true && songCurrentStep > prevGenStep)
         {
-            if(songCurrentStep > chartLines.Length)
+            if(songCurrentStep >= chartLines.Length)
             {
-                Debug.LogError("Beatmat ended, song will be stopped");
+                Debug.LogError("Beatmat ended at step: " + songCurrentStep + ", song will be stopped");
                 myAudioSource.Stop();
+                songPlaying = false;
                 return;
             }
+
             char[] characters = chartLines[songCurrentStep].ToCharArray();
 
             for (int i = 0; i < characters.Length; i++)
@@ -149,7 +154,6 @@ public class NoteSpawner : MonoBehaviour
                     }
                 }
             }
-
             prevGenStep = songCurrentStep;
         }
     }
