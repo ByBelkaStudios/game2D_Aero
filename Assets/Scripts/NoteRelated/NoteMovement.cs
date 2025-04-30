@@ -45,7 +45,7 @@ public class NoteMovement : MonoBehaviour
 
                     startPos = myrigidbody2d.position;
                     targetPos = startPos + moveDirection * 1.5f;
-                    timeToReachEnd = timeToReachEnd / 4f;
+                    timeToReachEnd = timeToReachEnd / 2.6f;
                 }
             }
             else
