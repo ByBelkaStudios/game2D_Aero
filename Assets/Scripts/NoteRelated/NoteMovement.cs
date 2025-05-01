@@ -52,14 +52,15 @@ public class NoteMovement : MonoBehaviour
             {
                 float percentageComplete = Mathf.Clamp01(timeElapsed / timeToReachEnd);
                 myrigidbody2d.position = Vector2.Lerp(startPos, targetPos, percentageComplete);
+
+                if(percentageComplete >= 1)
+                {
+                    Destroy(gameObject);
+                }
             }
 
             timeElapsed += Time.deltaTime;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
-    }
 }

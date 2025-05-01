@@ -1109,6 +1109,17 @@
                     "action": "ClickRight",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1a962d0-18f9-47d6-8db1-3f3bd96952ca",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
