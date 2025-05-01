@@ -1149,7 +1149,7 @@ MonoBehaviour:
   targetPositionBellow: {fileID: 554526316}
   targetPositionLeft: {fileID: 1270029096}
   targetPositionRight: {fileID: 1070258339}
-  trackLength: 2
+  trackLength: 4
 --- !u!4 &1122185855
 Transform:
   m_ObjectHideFlags: 0
