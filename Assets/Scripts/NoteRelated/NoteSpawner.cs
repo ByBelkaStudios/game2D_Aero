@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
+
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -8,10 +8,9 @@ using UnityEngine.Windows;
 
 public class NoteSpawner : MonoBehaviour
 {
-    //NEW
     [SerializeField] private float bpm = 120;
     [SerializeField] private int stepSubdivision = 4;
-    [SerializeField] private int continueStepsBehind = 2;
+    //[SerializeField] private int continueStepsBehind = 2;
 
     [SerializeField] private AudioSource myAudioSource;
 
