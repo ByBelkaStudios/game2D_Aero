@@ -88,6 +88,7 @@ public class NoteClick : MonoBehaviour
             combo++;
 
             UpdateScore(1);
+            myAudioSource.Play();
 
             return;
         }
@@ -106,7 +107,7 @@ public class NoteClick : MonoBehaviour
         }
 
         var distance = Mathf.Abs(noteGroupBellow.transform.GetChild(0).position.y - targetPositionAbove.position.y);
-
+        Debug.Log(distance);
 
         if (distance <= distanceLimit)
         {
@@ -114,6 +115,7 @@ public class NoteClick : MonoBehaviour
             combo++;
 
             UpdateScore(1);
+            myAudioSource.Play();
 
             return;
         }
@@ -139,6 +141,7 @@ public class NoteClick : MonoBehaviour
             combo++;
 
             UpdateScore(1);
+            myAudioSource.Play();
 
             return;
         }
@@ -164,6 +167,7 @@ public class NoteClick : MonoBehaviour
             combo++;
 
             UpdateScore(1);
+            myAudioSource.Play();
 
             return;
         }

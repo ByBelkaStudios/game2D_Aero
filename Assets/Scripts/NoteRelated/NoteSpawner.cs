@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
 
 public class NoteSpawner : MonoBehaviour
@@ -41,9 +42,8 @@ public class NoteSpawner : MonoBehaviour
     {
         if (stepSubdivision % 4 != 0)
         {
-            //Go back to menu
             Debug.LogError($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
-            stepSubdivision = 4;
+            StartCoroutine(ReturnMenu());
         }
 
         stepSubdivision = stepSubdivision / 4;
@@ -56,6 +56,7 @@ public class NoteSpawner : MonoBehaviour
         if (stringVar.Length < 1)
         {
             Debug.LogError("Song file is empty.");
+            StartCoroutine(ReturnMenu());
             return;
         }
 
@@ -64,9 +65,19 @@ public class NoteSpawner : MonoBehaviour
         chartLines = stringVar;
     }
 
+    private System.Collections.IEnumerator ReturnMenu()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("StartMenu");
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
     private IEnumerator WaitSong()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2.5f);
         myAudioSource.Play();
         songPlaying = true;
     }
@@ -112,6 +123,7 @@ public class NoteSpawner : MonoBehaviour
     }
 
     int prevGenStep = -1;
+
     private void Update()
     {
         enlapsedTime = myAudioSource.time;
@@ -120,15 +132,24 @@ public class NoteSpawner : MonoBehaviour
 
         if (songPlaying == true && songCurrentStep > prevGenStep)
         {
-            if(songCurrentStep >= chartLines.Length)
+            int chartStepToRead = songCurrentStep + stepSubdivision;
+
+            if (chartStepToRead >= chartLines.Length)
             {
-                Debug.LogError("Beatmat ended at step: " + songCurrentStep + ", song will be stopped");
-                myAudioSource.Stop();
+                Debug.LogError("Beatmap ended at step: " + chartStepToRead + ", song will be stopped");
+
+                StartCoroutine(ReturnMenu());
+
                 songPlaying = false;
                 return;
             }
 
-            char[] characters = chartLines[songCurrentStep].ToCharArray();
+            if (chartStepToRead < 0)
+            {
+                return;
+            }
+
+            char[] characters = chartLines[chartStepToRead].ToCharArray();
 
             for (int i = 0; i < characters.Length; i++)
             {
@@ -136,25 +157,19 @@ public class NoteSpawner : MonoBehaviour
                 {
                     switch (i)
                     {
-                        case 0:
-                            SpawnAbove();
-                            break;
-                        case 1:
-                            SpawnBellow();
-                            break;
-                        case 2:
-                            SpawnLeft();
-                            break;
-                        case 3:
-                            SpawnRight();
-                            break;
+                        case 0: SpawnAbove(); break;
+                        case 1: SpawnBellow(); break;
+                        case 2: SpawnLeft(); break;
+                        case 3: SpawnRight(); break;
                         default:
-                            Debug.LogError("Beatmeat written incorrectly at step: " + songCurrentStep);
+                            Debug.LogError("Beatmap written incorrectly at step: " + chartStepToRead);
                             break;
                     }
                 }
             }
+
             prevGenStep = songCurrentStep;
         }
     }
+
 }
