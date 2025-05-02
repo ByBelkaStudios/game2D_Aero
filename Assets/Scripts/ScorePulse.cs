@@ -5,39 +5,25 @@ using UnityEngine.Events;
 
 public class ScorePulse : MonoBehaviour
 {
-    private Vector3 startingScale;
-
-    [SerializeField] private AudioSource hitSound;
-    [SerializeField] private AudioSource missSound;
-
-    [SerializeField] private float decayScale = 5.0f;
-    [SerializeField] private float pulseScale = 1.05f;
-    [SerializeField] private float maximumScale = 2.0f;
-    [SerializeField] private CinemachineImpulseSource listener;
+    [SerializeField] private Vector3 startingScale;
+    [SerializeField] private RectTransform RectTransform;
  
     private void Start()
     {
-        startingScale = transform.localScale;
+        startingScale = RectTransform.localScale;
     }
 
     public void Pulse()
     {
-        hitSound.Play();
-
-        transform.localScale = transform.localScale * pulseScale;
-        if (transform.localScale.x > maximumScale)
+        RectTransform.localScale = RectTransform.localScale * GameManager.Instance.PulseScale;
+        if (RectTransform.localScale.x > GameManager.Instance.MaximumScale)
         {
-            transform.localScale = new Vector3(maximumScale, maximumScale, maximumScale);
+            RectTransform.localScale = new Vector3(GameManager.Instance.MaximumScale, GameManager.Instance.MaximumScale, GameManager.Instance.MaximumScale);
         }
-    }
-
-    public void PulseOnError()
-    {
-        GameManager.Instance.ApplyImpulse();
     }
 
     private void Update()
     {
-        transform.localScale = Vector3.Lerp(transform.localScale, startingScale, Time.deltaTime * decayScale);
+        RectTransform.localScale = Vector3.Lerp(RectTransform.localScale, startingScale, Time.deltaTime * GameManager.Instance.DecayScale);
     }
 }

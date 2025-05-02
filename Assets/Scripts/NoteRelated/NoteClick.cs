@@ -90,6 +90,10 @@ public class NoteClick : MonoBehaviour
     {
         Destroy(noteGroup);
 
+        GameManager.Instance.ApplyPulse();
+
+        GameManager.Instance.HealthBar.IncreaseHealth();
+
         GameManager.Instance.IncrementScore(1);
         GameManager.Instance.IncrementCombo();
         GameManager.Instance.IncrementMultiplier();
@@ -99,6 +103,8 @@ public class NoteClick : MonoBehaviour
 
     private void NoteMiss()
     {
+        GameManager.Instance.HealthBar.DecreaseHealth();
+
         GameManager.Instance.ResetCombo();
         GameManager.Instance.ApplyImpulse();
 

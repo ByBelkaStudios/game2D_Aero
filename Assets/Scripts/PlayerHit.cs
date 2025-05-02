@@ -19,6 +19,8 @@ public class PlayerHit : MonoBehaviour
 
     private void OnPlayerHit()
     {
+        GameManager.Instance.HealthBar.DecreaseHealth();
+
         GameManager.Instance.ApplyImpulse();
         GameManager.Instance.ResetCombo();
 

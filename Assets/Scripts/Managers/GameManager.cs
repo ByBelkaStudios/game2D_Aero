@@ -1,13 +1,15 @@
 using System;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
     [SerializeField] private UIManager UImanager;
-
+    [SerializeField] private HealthBar healthBar;
 
     [SerializeField] private AudioSource noteSuccessSound;
     [SerializeField] private AudioSource noteMissSound;
@@ -21,13 +23,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int combo = 0;
     [SerializeField] private float scoreMultiplier;
 
+    public event Action OnNoteSuccess;
     public event Action OnUIUpdate;
     public event Action OnNoteMiss;
+    public event Action OnHealthChanged;
+
 
     public AudioSource SuccessNoteSound => noteSuccessSound;
     public AudioSource MissNoteSound => noteMissSound;
 
+    public HealthBar HealthBar => healthBar;
     public float DecayScale { get => decayScale; set => decayScale = value; }
+    public float PulseScale { get => pulseScale; set => pulseScale = value; }
+    public float MaximumScale {get => maximumScale; set => maximumScale = value; }
 
     public float Multiplier { get => scoreMultiplier; set => scoreMultiplier = value; }
     public int Combo { get => combo; set => combo = value; }
@@ -44,14 +52,40 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    public void GoToMenu()
+    {
+        StartCoroutine(ReturnMenu());
+    }
+
+    private System.Collections.IEnumerator ReturnMenu()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("StartMenu");
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
     public void ApplyImpulse()
     {
         listener.GenerateImpulse();
     }
 
+    public void ApplyPulse()
+    {
+        OnNoteSuccess?.Invoke();
+    }
+    
+    public void InvokeOnHealthChange()
+    {
+        OnHealthChanged?.Invoke();
+    }
+
     public void IncrementScore(int hit)
     {
         score = score + (int)MathF.Round(hit * Multiplier * ScoreScale);
+        PlayerPrefs.SetString("score", $"Last Score {score}");
         OnUIUpdate?.Invoke();
     }
 

@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.Windows;
 
 public class NoteSpawner : MonoBehaviour
@@ -26,7 +27,11 @@ public class NoteSpawner : MonoBehaviour
     [SerializeField] private Transform targetPositionLeft;
     [SerializeField] private Transform targetPositionRight;
 
+    [SerializeField] private TextAsset fileTrack;
+
     [SerializeField] private float trackLength = 4f;
+
+    private int defaultStepSub = 8;
 
     private float enlapsedTime;
     private int songCurrentStep;
@@ -39,39 +44,33 @@ public class NoteSpawner : MonoBehaviour
 
     private void Awake()
     {
-        if (stepSubdivision % 4 != 0)
+        if (stepSubdivision % 4 == 0)
         {
-            Debug.Log($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
-            StartCoroutine(ReturnMenu());
+            stepSubdivision = stepSubdivision / 4;
+            stepDuration = 60 / (bpm * stepSubdivision);
+
+            return;
         }
 
-        stepSubdivision = stepSubdivision / 4;
-        stepDuration = 60 / (bpm * stepSubdivision);
+        Debug.Log($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
+
+        GameManager.Instance.GoToMenu();
     }
 
     private void Start()
     {
-        var stringVar = gameObject.GetComponent<ChartReader>().ReadFile();
+        var stringVar = fileTrack.text;
         if (stringVar.Length < 1)
         {
             Debug.Log("Song file is empty.");
-            StartCoroutine(ReturnMenu());
+            GameManager.Instance.GoToMenu();
             return;
         }
 
         StartCoroutine(WaitSong());
 
-        chartLines = stringVar;
-    }
-
-    private System.Collections.IEnumerator ReturnMenu()
-    {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("StartMenu");
-
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
+        string[] chartSplitLines = stringVar.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+        chartLines = chartSplitLines;
     }
 
     private IEnumerator WaitSong()
@@ -133,13 +132,13 @@ public class NoteSpawner : MonoBehaviour
         {
             int chartStepToRead = songCurrentStep + stepSubdivision;
 
-            if (chartStepToRead >= chartLines.Length)
+            if (chartStepToRead >= chartLines.Length || myAudioSource.isPlaying is false)
             {
                 Debug.Log("Beatmap ended at step: " + chartStepToRead + ", song will be stopped");
 
                 songPlaying = false;
 
-                StartCoroutine(ReturnMenu());
+                GameManager.Instance.GoToMenu();
 
                 return;
 
