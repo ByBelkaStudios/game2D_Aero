@@ -41,7 +41,7 @@ public class NoteSpawner : MonoBehaviour
     {
         if (stepSubdivision % 4 != 0)
         {
-            Debug.LogError($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
+            Debug.Log($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
             StartCoroutine(ReturnMenu());
         }
 
@@ -54,7 +54,7 @@ public class NoteSpawner : MonoBehaviour
         var stringVar = gameObject.GetComponent<ChartReader>().ReadFile();
         if (stringVar.Length < 1)
         {
-            Debug.LogError("Song file is empty.");
+            Debug.Log("Song file is empty.");
             StartCoroutine(ReturnMenu());
             return;
         }
@@ -135,12 +135,14 @@ public class NoteSpawner : MonoBehaviour
 
             if (chartStepToRead >= chartLines.Length)
             {
-                Debug.LogError("Beatmap ended at step: " + chartStepToRead + ", song will be stopped");
+                Debug.Log("Beatmap ended at step: " + chartStepToRead + ", song will be stopped");
+
+                songPlaying = false;
 
                 StartCoroutine(ReturnMenu());
 
-                songPlaying = false;
                 return;
+
             }
 
             if (chartStepToRead < 0)
@@ -161,7 +163,7 @@ public class NoteSpawner : MonoBehaviour
                         case 2: SpawnLeft(); break;
                         case 3: SpawnRight(); break;
                         default:
-                            Debug.LogError("Beatmap written incorrectly at step: " + chartStepToRead);
+                            Debug.Log("Beatmap written incorrectly at step: " + chartStepToRead);
                             break;
                     }
                 }

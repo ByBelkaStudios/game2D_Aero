@@ -21,9 +21,6 @@ public class NoteClick : MonoBehaviour
     [SerializeField] private TMP_Text myComboText;
     [SerializeField] private TMP_Text myMultiplierText;
 
-    [SerializeField] private AudioSource myAudioSource;
-    [SerializeField] private AudioSource myMissSource;
-
     [SerializeField] private int scoreScale = 1;
 
     [SerializeField] private float distanceLimit = 2.0f;
@@ -39,6 +36,17 @@ public class NoteClick : MonoBehaviour
 
     [SerializeField] private float scoreMultiplierIncrease = 0.25f;
     [SerializeField] private float scoreMultiplerDefault = 1.00f;
+    [SerializeField] private GameObject scoresGroup;
+
+    private void OnEnable()
+    {
+        GameManager.Instance.OnNoteMiss += NoteMiss;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Instance.OnNoteMiss -= NoteMiss;
+    }
 
     private void Start()
     {
@@ -74,10 +82,32 @@ public class NoteClick : MonoBehaviour
 
         clickRightAtion.Disable();
         clickRightAtion.performed -= ClickRight;
+
+        GameManager.Instance.OnNoteMiss -= NoteMiss;
+    }
+
+    private void NoteSuccess(GameObject noteGroup)
+    {
+        Destroy(noteGroup);
+
+        GameManager.Instance.IncrementScore(1);
+        GameManager.Instance.IncrementCombo();
+        GameManager.Instance.IncrementMultiplier();
+
+        GameManager.Instance.SuccessNoteSound.Play();
+    }
+
+    private void NoteMiss()
+    {
+        GameManager.Instance.ResetCombo();
+        GameManager.Instance.ApplyImpulse();
+
+        GameManager.Instance.MissNoteSound.Play();
     }
 
     private void ClickAbove(InputAction.CallbackContext context)
     {
+
         if (noteGroupAbove.transform.childCount == 0)
         {
             return;
@@ -87,22 +117,13 @@ public class NoteClick : MonoBehaviour
 
         if(distance <= distanceLimit)
         {
-            Destroy(noteGroupAbove.transform.GetChild(0).gameObject);
+            NoteSuccess(noteGroupAbove.transform.GetChild(0).gameObject);
 
-            scoreMultiplier += scoreMultiplierIncrease;
-            combo++;
-
-            UpdateScore(1);
-            myAudioSource.Play();
-
+            //click sound
         }
         else
         {
-            scoreMultiplier = scoreMultiplerDefault;
-            combo = 0;
-
-            UpdateScore(0);
-            myMissSource.Play();
+            NoteMiss();
         }
     }
 
@@ -117,22 +138,13 @@ public class NoteClick : MonoBehaviour
 
         if (distance <= distanceLimit)
         {
-            Destroy(noteGroupBellow.transform.GetChild(0).gameObject);
+            NoteSuccess(noteGroupBellow.transform.GetChild(0).gameObject);
 
-            scoreMultiplier += scoreMultiplierIncrease;
-            combo++;
-
-            UpdateScore(1);
-            myAudioSource.Play();
-
+            //click sound
         }
         else
         {
-            scoreMultiplier = scoreMultiplerDefault;
-            combo = 0;
-
-            UpdateScore(0);
-            myMissSource.Play();
+            NoteMiss();
         }
     }
 
@@ -145,26 +157,16 @@ public class NoteClick : MonoBehaviour
         }
 
         var distance = Mathf.Abs(noteGroupLeft.transform.GetChild(0).position.x - targetPositionLeft.position.x);
-        Debug.Log(distance);
 
         if (distance <= distanceLimit)
         {
-            Destroy(noteGroupLeft.transform.GetChild(0).gameObject);
+            NoteSuccess(noteGroupLeft.transform.GetChild(0).gameObject);
 
-            scoreMultiplier += scoreMultiplierIncrease;
-            combo++;
-
-            UpdateScore(1);
-            myAudioSource.Play();
-
+            //click sound
         }
         else
         {
-            scoreMultiplier = scoreMultiplerDefault;
-            combo = 0;
-
-            UpdateScore(0);
-            myMissSource.Play();
+            NoteMiss();
         }
     }
 
@@ -179,32 +181,13 @@ public class NoteClick : MonoBehaviour
 
         if (distance <= distanceLimit)
         {
-            Destroy(noteGroupRight.transform.GetChild(0).gameObject);
+            NoteSuccess(noteGroupRight.transform.GetChild(0).gameObject);
 
-            scoreMultiplier += scoreMultiplierIncrease;
-            combo++;
-
-            UpdateScore(1);
-            myAudioSource.Play();
-
+            //click sound
         }
         else
         {
-            scoreMultiplier = scoreMultiplerDefault;
-            combo = 0;
-
-            UpdateScore(0);
-            myMissSource.Play();
+            NoteMiss();
         }
     }
-
-    private void UpdateScore(int hit)
-    {
-        score += (int)MathF.Round(hit * scoreMultiplier * scoreScale);
-
-        myScoreText.text = ("Score: " + score.ToString());
-        myComboText.text = ("Combo: " + combo.ToString());
-        myMultiplierText.text = ("Mul: " + scoreMultiplier.ToString());
-    }
-
 }
