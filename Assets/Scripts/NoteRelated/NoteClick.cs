@@ -103,7 +103,6 @@ public class NoteClick : MonoBehaviour
 
     private void NoteMiss()
     {
-        GameManager.Instance.HealthBar.DecreaseHealth();
 
         GameManager.Instance.ResetCombo();
         GameManager.Instance.ApplyImpulse();

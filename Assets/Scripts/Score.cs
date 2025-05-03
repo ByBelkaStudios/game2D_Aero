@@ -7,6 +7,6 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
-        scoreText.text = PlayerPrefs.HasKey("score")? $"Last Score {GameManager.Instance.Score}": "Last Score 0";
+        scoreText.text = PlayerPrefs.HasKey("score")? $"{PlayerPrefs.GetString("score")}": "Last Score 0";
     }
 }
