@@ -21,8 +21,6 @@ public class NoteClick : MonoBehaviour
     [SerializeField] private TMP_Text myComboText;
     [SerializeField] private TMP_Text myMultiplierText;
 
-    [SerializeField] private int scoreScale = 1;
-
     [SerializeField] private float distanceLimit = 2.0f;
 
     private InputAction clickAboveAction;
@@ -30,12 +28,6 @@ public class NoteClick : MonoBehaviour
     private InputAction clickLeftAtion;
     private InputAction clickRightAtion;
 
-    private int score = 0;
-    private int combo = 0;
-    private float scoreMultiplier = 1.00f;
-
-    [SerializeField] private float scoreMultiplierIncrease = 0.25f;
-    [SerializeField] private float scoreMultiplerDefault = 1.00f;
     [SerializeField] private GameObject scoresGroup;
 
     private void OnEnable()
@@ -50,8 +42,6 @@ public class NoteClick : MonoBehaviour
 
     private void Start()
     {
-        scoreMultiplier = scoreMultiplerDefault;
-
         clickAboveAction = InputManager.Instance.GetClickAboveAction();
         clickAboveAction.Enable();
         clickAboveAction.performed += ClickAbove;

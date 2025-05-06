@@ -31,8 +31,6 @@ public class NoteSpawner : MonoBehaviour
 
     [SerializeField] private float trackLength = 4f;
 
-    private int defaultStepSub = 8;
-
     private float enlapsedTime;
     private int songCurrentStep;
 
@@ -54,7 +52,7 @@ public class NoteSpawner : MonoBehaviour
 
         Debug.Log($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
 
-        GameManager.Instance.GoToMenu();
+        ReturnMenu();
     }
 
     private void Start()
@@ -63,7 +61,7 @@ public class NoteSpawner : MonoBehaviour
         if (stringVar.Length < 1)
         {
             Debug.Log("Song file is empty.");
-            GameManager.Instance.GoToMenu();
+            ReturnMenu();
             return;
         }
 
@@ -78,6 +76,11 @@ public class NoteSpawner : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         myAudioSource.Play();
         songPlaying = true;
+    }
+
+    private void ReturnMenu()
+    {
+        GameManager.Instance.LoadScene("StartMenu");
     }
 
     private void SpawnAbove()
@@ -138,7 +141,7 @@ public class NoteSpawner : MonoBehaviour
 
                 songPlaying = false;
 
-                GameManager.Instance.GoToMenu();
+                ReturnMenu();
 
                 return;
 

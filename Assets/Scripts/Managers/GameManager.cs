@@ -47,19 +47,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float scoreMultiplerDefault = 1.00f;
     [SerializeField] private int scoreScale = 4;
 
+    private void Start()
+    {
+        scoreMultiplier = scoreMultiplerDefault;
+    }
+
     private void Awake()
     { 
         Instance = this;
     }
 
-    public void GoToMenu()
+    public void LoadScene(string scene)
     {
-        StartCoroutine(ReturnMenu());
+        StartCoroutine(LoadSceneAsync(scene));
     }
 
-    private System.Collections.IEnumerator ReturnMenu()
+    private System.Collections.IEnumerator LoadSceneAsync(string scene)
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("StartMenu");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
 
         while (!asyncLoad.isDone)
         {
