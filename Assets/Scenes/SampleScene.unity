@@ -2978,6 +2978,7 @@ MonoBehaviour:
   score: 0
   combo: 0
   scoreMultiplier: 0
+  scoreMultiplierLimit: 8
   scoreMultiplierIncrease: 0.25
   scoreMultiplerDefault: 1
   scoreScale: 4

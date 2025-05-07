@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int score = 0;
     [SerializeField] private int combo = 0;
     [SerializeField] private float scoreMultiplier;
+    [SerializeField] private float scoreMultiplierLimit;
 
     public event Action OnNoteSuccess;
     public event Action OnUIUpdate;
@@ -102,6 +103,14 @@ public class GameManager : MonoBehaviour
     }
 
     public void IncrementCombo() { combo++; OnUIUpdate?.Invoke(); }
-    public void IncrementMultiplier() { scoreMultiplier += scoreMultiplierIncrease; }
+
+    public void IncrementMultiplier()
+    {
+        if(scoreMultiplier >= scoreMultiplierLimit)
+        {
+            return;
+        }
+        scoreMultiplier += scoreMultiplierIncrease;
+    }
 
 }
