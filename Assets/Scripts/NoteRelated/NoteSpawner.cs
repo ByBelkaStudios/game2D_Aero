@@ -1,17 +1,11 @@
 using System;
 using System.Collections;
-
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.Windows;
 
 public class NoteSpawner : MonoBehaviour
 {
     [SerializeField] private float bpm = 120;
     [SerializeField] private int stepSubdivision = 4;
-    //[SerializeField] private int continueStepsBehind = 2;
 
     [SerializeField] private AudioSource myAudioSource;
 
@@ -51,7 +45,6 @@ public class NoteSpawner : MonoBehaviour
         }
 
         Debug.Log($"Step subdivision cannot be: {stepSubdivision}, Please use power of 2.");
-
         ReturnMenu();
     }
 
@@ -138,9 +131,7 @@ public class NoteSpawner : MonoBehaviour
             if (chartStepToRead >= chartLines.Length || myAudioSource.isPlaying is false)
             {
                 Debug.Log("Beatmap ended at step: " + chartStepToRead + ", song will be stopped");
-
                 songPlaying = false;
-
                 ReturnMenu();
 
                 return;

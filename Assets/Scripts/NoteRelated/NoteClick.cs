@@ -1,9 +1,6 @@
-using System;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class NoteClick : MonoBehaviour
 {
@@ -113,8 +110,6 @@ public class NoteClick : MonoBehaviour
         if(distance <= distanceLimit)
         {
             NoteSuccess(noteGroupAbove.transform.GetChild(0).gameObject);
-
-            //click sound
         }
         else
         {
@@ -134,8 +129,6 @@ public class NoteClick : MonoBehaviour
         if (distance <= distanceLimit)
         {
             NoteSuccess(noteGroupBellow.transform.GetChild(0).gameObject);
-
-            //click sound
         }
         else
         {
@@ -156,8 +149,6 @@ public class NoteClick : MonoBehaviour
         if (distance <= distanceLimit)
         {
             NoteSuccess(noteGroupLeft.transform.GetChild(0).gameObject);
-
-            //click sound
         }
         else
         {
@@ -178,7 +169,6 @@ public class NoteClick : MonoBehaviour
         {
             NoteSuccess(noteGroupRight.transform.GetChild(0).gameObject);
 
-            //click sound
         }
         else
         {

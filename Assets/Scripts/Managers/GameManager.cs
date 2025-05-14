@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     public event Action OnNoteMiss;
     public event Action OnHealthChanged;
 
-
     public AudioSource SuccessNoteSound => noteSuccessSound;
     public AudioSource MissNoteSound => noteMissSound;
 
