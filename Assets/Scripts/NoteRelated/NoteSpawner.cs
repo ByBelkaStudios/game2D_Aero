@@ -25,6 +25,8 @@ public class NoteSpawner : MonoBehaviour
 
     [SerializeField] private float trackLength = 4f;
 
+    public SongData songdata;
+
     private float enlapsedTime;
     private int songCurrentStep;
 
@@ -50,7 +52,8 @@ public class NoteSpawner : MonoBehaviour
 
     private void Start()
     {
-        var stringVar = fileTrack.text;
+        //var stringVar = fileTrack.text;
+        var stringVar = songdata.chartFile.text;
         if (stringVar.Length < 1)
         {
             Debug.Log("Song file is empty.");
