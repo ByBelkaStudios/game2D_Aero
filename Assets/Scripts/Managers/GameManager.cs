@@ -2,7 +2,6 @@ using System;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
@@ -42,10 +41,11 @@ public class GameManager : MonoBehaviour
     public int ScoreScale { get => scoreScale; set => scoreScale = value; }
     public int Score {  get => score; set => score = value;}
 
-
     [SerializeField] private float scoreMultiplierIncrease = 0.25f;
     [SerializeField] private float scoreMultiplerDefault = 1.00f;
     [SerializeField] private int scoreScale = 4;
+
+    public SongData songdata;
 
     private void Start()
     {
@@ -60,6 +60,11 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string scene)
     {
         StartCoroutine(LoadSceneAsync(scene));
+    }
+
+    public SongData LoadSong()
+    {
+        return songdata;
     }
 
     private System.Collections.IEnumerator LoadSceneAsync(string scene)

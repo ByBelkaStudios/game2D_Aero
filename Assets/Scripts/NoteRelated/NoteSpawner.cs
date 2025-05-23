@@ -1,12 +1,10 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NoteSpawner : MonoBehaviour
 {
-    [SerializeField] private float bpm = 120;
-    [SerializeField] private int stepSubdivision = 4;
-
     [SerializeField] private AudioSource myAudioSource;
 
     [SerializeField] private GameObject notePrefab;
@@ -21,11 +19,12 @@ public class NoteSpawner : MonoBehaviour
     [SerializeField] private Transform targetPositionLeft;
     [SerializeField] private Transform targetPositionRight;
 
-    [SerializeField] private TextAsset fileTrack;
-
     [SerializeField] private float trackLength = 4f;
 
     public SongData songdata;
+
+    private float bpm;
+    private int stepSubdivision;
 
     private float enlapsedTime;
     private int songCurrentStep;
@@ -38,6 +37,11 @@ public class NoteSpawner : MonoBehaviour
 
     private void Awake()
     {
+        songdata = GameManager.Instance.LoadSong();
+
+        bpm = songdata.bpm;
+        stepSubdivision = songdata.stepSubdivision;
+
         if (stepSubdivision % 4 == 0)
         {
             stepSubdivision = stepSubdivision / 4;
@@ -52,7 +56,6 @@ public class NoteSpawner : MonoBehaviour
 
     private void Start()
     {
-        //var stringVar = fileTrack.text;
         var stringVar = songdata.chartFile.text;
         if (stringVar.Length < 1)
         {
@@ -137,8 +140,10 @@ public class NoteSpawner : MonoBehaviour
                 songPlaying = false;
                 ReturnMenu();
 
-                return;
+                songdata.scoreLeaderboard.Add(GameManager.Instance.Score);
+                Debug.Log(songdata.scoreLeaderboard[1]);
 
+                return;
             }
 
             if (chartStepToRead < 0)

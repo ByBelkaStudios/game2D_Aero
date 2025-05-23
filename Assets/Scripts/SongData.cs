@@ -10,6 +10,8 @@ public class SongData : ScriptableObject
     public TextAsset chartFile;
     public float bpm;
 
+    public int stepSubdivision; 
+
     public string songName;
     public string songAuthor;
     public string songDifficulty;
