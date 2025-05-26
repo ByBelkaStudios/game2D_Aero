@@ -8,6 +8,7 @@ public class SongData : ScriptableObject
     public List<int> scoreLeaderboard = new List<int>();
 
     public TextAsset chartFile;
+    public AudioClip songAudioFile;
     public float bpm;
 
     public int stepSubdivision; 

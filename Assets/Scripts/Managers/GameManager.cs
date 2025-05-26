@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int scoreScale = 4;
 
     public SongData songdata;
+    public SongData SelectSongData { get => songdata; set => songdata = value; }
 
     private void Start()
     {

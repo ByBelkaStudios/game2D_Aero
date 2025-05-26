@@ -73,6 +73,7 @@ public class NoteSpawner : MonoBehaviour
     private IEnumerator WaitSong()
     {
         yield return new WaitForSeconds(2.5f);
+        myAudioSource.clip = songdata.songAudioFile;
         myAudioSource.Play();
         songPlaying = true;
     }
