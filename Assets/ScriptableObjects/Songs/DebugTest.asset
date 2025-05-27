@@ -15,9 +15,9 @@ MonoBehaviour:
   score: 0
   scoreLeaderboard: 
   chartFile: {fileID: 4900000, guid: ab845d3f70d71420b9c7dabf393c135e, type: 3}
-  songAudioFile: {fileID: 8300000, guid: c1f1f678a8f8c471aabe680ca1418248, type: 3}
-  bpm: 60
   stepSubdivision: 8
   songName: DebugTest
   songAuthor: DebugTest
-  songDifficulty: DebugTest
+  songAudioFile: {fileID: 8300000, guid: c1f1f678a8f8c471aabe680ca1418248, type: 3}
+  bpm: 60
+  songDifficulty: 2

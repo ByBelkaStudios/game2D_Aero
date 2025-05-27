@@ -37,7 +37,7 @@ public class NoteSpawner : MonoBehaviour
 
     private void Awake()
     {
-        songdata = GameManager.Instance.LoadSong();
+        songdata = GameManager.Instance.gamedata.currentSongData;
 
         bpm = songdata.bpm;
         stepSubdivision = songdata.stepSubdivision;
@@ -80,6 +80,7 @@ public class NoteSpawner : MonoBehaviour
 
     private void ReturnMenu()
     {
+        GameManager.Instance.gamedata.ResetSong();
         GameManager.Instance.LoadScene("StartMenu");
     }
 

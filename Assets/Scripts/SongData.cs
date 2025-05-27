@@ -1,19 +1,22 @@
 using System.Collections.Generic;
+using Data;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/SongData")]
+[CreateAssetMenu(fileName = "SongData", menuName = "SongData", order = 1)]
 public class SongData : ScriptableObject
 {
     public int score;
     public List<int> scoreLeaderboard = new List<int>();
 
     public TextAsset chartFile;
-    public AudioClip songAudioFile;
-    public float bpm;
 
     public int stepSubdivision; 
 
     public string songName;
     public string songAuthor;
-    public string songDifficulty;
+    
+    public AudioClip songAudioFile;
+    public float bpm;
+    
+    public ESongDifficulty songDifficulty;
 }

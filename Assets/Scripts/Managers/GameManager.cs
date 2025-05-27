@@ -1,4 +1,5 @@
 using System;
+using Data;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -45,8 +46,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float scoreMultiplerDefault = 1.00f;
     [SerializeField] private int scoreScale = 4;
 
-    public SongData songdata;
-    public SongData SelectSongData { get => songdata; set => songdata = value; }
+    public SoGameController gamedata;
 
     private void Start()
     {
@@ -61,11 +61,6 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string scene)
     {
         StartCoroutine(LoadSceneAsync(scene));
-    }
-
-    public SongData LoadSong()
-    {
-        return songdata;
     }
 
     private System.Collections.IEnumerator LoadSceneAsync(string scene)
