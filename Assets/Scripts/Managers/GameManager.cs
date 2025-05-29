@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public event Action OnUIUpdate;
     public event Action OnNoteMiss;
     public event Action OnHealthChanged;
+    public event Action OnSongBeat;
 
     public AudioSource SuccessNoteSound => noteSuccessSound;
     public AudioSource MissNoteSound => noteMissSound;
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
     public int Combo { get => combo; set => combo = value; }
     public int ScoreScale { get => scoreScale; set => scoreScale = value; }
     public int Score {  get => score; set => score = value;}
+
 
     [SerializeField] private float scoreMultiplierIncrease = 0.25f;
     [SerializeField] private float scoreMultiplerDefault = 1.00f;
@@ -71,6 +73,11 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
         }
+    }
+
+    public void SongBeat()
+    {
+        OnSongBeat?.Invoke();
     }
 
     public void ApplyImpulse()

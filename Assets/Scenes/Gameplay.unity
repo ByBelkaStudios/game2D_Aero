@@ -375,8 +375,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b56b0ae293c409499e11bd5f14450f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUI: 1
+  pulseOnBeat: 0
+  rectTransform: {fileID: 153833733}
+  gameObjectTransform: {fileID: 0}
   startingScale: {x: 0, y: 0, z: 0}
-  RectTransform: {fileID: 153833733}
 --- !u!1 &164583788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 668186009}
   - component: {fileID: 668186008}
+  - component: {fileID: 668186010}
   m_Layer: 0
   m_Name: LineBellow
   m_TagString: Untagged
@@ -1305,6 +1309,23 @@ Transform:
   - {fileID: 1864018015}
   m_Father: {fileID: 1221682828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668186010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668186007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b56b0ae293c409499e11bd5f14450f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isUI: 0
+  pulseOnBeat: 1
+  rectTransform: {fileID: 0}
+  gameObjectTransform: {fileID: 0}
+  startingScale: {x: 0, y: 0, z: 0}
 --- !u!1 &777584692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 949331084}
   - component: {fileID: 949331083}
+  - component: {fileID: 949331085}
   m_Layer: 0
   m_Name: LineRight
   m_TagString: Untagged
@@ -1548,6 +1570,23 @@ Transform:
   - {fileID: 1350123161}
   m_Father: {fileID: 1221682828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &949331085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949331082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b56b0ae293c409499e11bd5f14450f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isUI: 0
+  pulseOnBeat: 1
+  rectTransform: {fileID: 0}
+  gameObjectTransform: {fileID: 0}
+  startingScale: {x: 0, y: 0, z: 0}
 --- !u!1 &976787299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,7 +1834,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 5
   m_Sprite: {fileID: -1803323738412565384, guid: f39f2451f28ad4b81919e269f791ee00, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5372549}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2506,6 +2545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374429850}
   - component: {fileID: 1374429849}
+  - component: {fileID: 1374429851}
   m_Layer: 0
   m_Name: LineAbove
   m_TagString: Untagged
@@ -2583,6 +2623,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1221682828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1374429851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374429848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b56b0ae293c409499e11bd5f14450f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isUI: 0
+  pulseOnBeat: 1
+  rectTransform: {fileID: 0}
+  gameObjectTransform: {fileID: 0}
+  startingScale: {x: 0, y: 0, z: 0}
 --- !u!1 &1395380126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,6 +2650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1395380128}
   - component: {fileID: 1395380127}
+  - component: {fileID: 1395380129}
   m_Layer: 0
   m_Name: LineLeft
   m_TagString: Untagged
@@ -2671,6 +2729,23 @@ Transform:
   - {fileID: 164583789}
   m_Father: {fileID: 1221682828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1395380129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395380126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b56b0ae293c409499e11bd5f14450f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isUI: 0
+  pulseOnBeat: 1
+  rectTransform: {fileID: 0}
+  gameObjectTransform: {fileID: 0}
+  startingScale: {x: 0, y: 0, z: 0}
 --- !u!1 &1418539665
 GameObject:
   m_ObjectHideFlags: 0
@@ -3059,8 +3134,8 @@ MonoBehaviour:
   noteSuccessSound: {fileID: 1782091694}
   noteMissSound: {fileID: 1782091693}
   decayScale: 5
-  pulseScale: 1.05
-  maximumScale: 2
+  pulseScale: 1.2
+  maximumScale: 6
   listener: {fileID: 93095451}
   score: 0
   combo: 0
@@ -3069,7 +3144,7 @@ MonoBehaviour:
   scoreMultiplierIncrease: 0.25
   scoreMultiplerDefault: 1
   scoreScale: 4
-  songdata: {fileID: 0}
+  gamedata: {fileID: 11400000, guid: 51694b1860bd8e24dafeea0e6d2fc161, type: 2}
 --- !u!4 &1782091692
 Transform:
   m_ObjectHideFlags: 0
@@ -3098,7 +3173,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 91882f85f4f435c49831a070773ebbc4, type: 3}
   m_Resource: {fileID: 8300000, guid: 91882f85f4f435c49831a070773ebbc4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3195,7 +3270,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: d9a2d0253492d49499cef4a46990f0bb, type: 3}
   m_Resource: {fileID: 8300000, guid: d9a2d0253492d49499cef4a46990f0bb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

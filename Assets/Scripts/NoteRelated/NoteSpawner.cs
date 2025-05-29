@@ -128,6 +128,11 @@ public class NoteSpawner : MonoBehaviour
 
     private void Update()
     {
+        if (!myAudioSource.isPlaying)
+        {
+            return;
+        }
+
         enlapsedTime = myAudioSource.time;
 
         songCurrentStep = (int)Mathf.Floor(enlapsedTime / stepDuration);
@@ -143,7 +148,7 @@ public class NoteSpawner : MonoBehaviour
                 ReturnMenu();
 
                 songdata.scoreLeaderboard.Add(GameManager.Instance.Score);
-                Debug.Log(songdata.scoreLeaderboard[1]);
+                Debug.Log(songdata.scoreLeaderboard[0]);
 
                 return;
             }
@@ -170,6 +175,11 @@ public class NoteSpawner : MonoBehaviour
                             break;
                     }
                 }
+            }
+
+            if((songCurrentStep - 0) % stepSubdivision == 0)
+            {
+                GameManager.Instance.SongBeat();
             }
 
             prevGenStep = songCurrentStep;
