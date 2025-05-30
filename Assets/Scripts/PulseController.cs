@@ -1,14 +1,22 @@
 using UnityEngine;
 
-public class ScorePulse : MonoBehaviour
+public class PulseController : MonoBehaviour
 {
-    [SerializeField] private bool isUI;
+    public enum EpulseType
+    {
+        UI,
+        GameObject
+    };
+
+    [SerializeField] public EpulseType pulseType;
+
     [SerializeField] private bool pulseOnBeat;
 
     [SerializeField] private RectTransform rectTransform;
-    [SerializeField] private Transform gameObjectTransform;
 
     [SerializeField] private Vector3 startingScale;
+
+    private Transform gameObjectTransform;
 
     private void OnEnable()
     {
@@ -28,7 +36,7 @@ public class ScorePulse : MonoBehaviour
 
     private void Start()
     {
-        if(isUI)
+        if(pulseType == EpulseType.UI)
         {
             startingScale = rectTransform.localScale;
             return;
@@ -40,7 +48,7 @@ public class ScorePulse : MonoBehaviour
 
     public void Pulse()
     {
-        if(isUI)
+        if(pulseType == EpulseType.UI)
         {
             rectTransform.localScale = rectTransform.localScale * GameManager.Instance.PulseScale;
             if (rectTransform.localScale.x > GameManager.Instance.MaximumScale)
@@ -67,7 +75,7 @@ public class ScorePulse : MonoBehaviour
 
     private void Update()
     {
-        if(isUI)
+        if(pulseType == EpulseType.UI)
         {
             rectTransform.localScale = Vector3.Lerp(rectTransform.localScale, startingScale, Time.deltaTime * GameManager.Instance.DecayScale);
             return;

@@ -18,6 +18,6 @@ MonoBehaviour:
   stepSubdivision: 8
   songName: DebugTest
   songAuthor: DebugTest
-  songAudioFile: {fileID: 8300000, guid: c1f1f678a8f8c471aabe680ca1418248, type: 3}
+  songAudioFile: {fileID: 8300000, guid: fa44ff6e978c944448d20d437a2f326d, type: 3}
   bpm: 60
   songDifficulty: 2

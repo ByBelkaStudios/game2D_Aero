@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text myMultiplierText;
 
     [SerializeField] private Slider slider;
-    [SerializeField] private ScorePulse scorePulse;
+    [SerializeField] private PulseController scorePulse;
 
     private void OnEnable()
     {
