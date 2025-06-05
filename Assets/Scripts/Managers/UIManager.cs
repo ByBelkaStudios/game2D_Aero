@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
 
     private void OnNoteSuccess()
     {
-        scorePulse.Pulse();
+        //scorePulse.Pulse();
     }
 
     private void RefreshHealth()

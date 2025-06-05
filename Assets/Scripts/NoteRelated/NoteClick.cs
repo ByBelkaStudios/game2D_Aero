@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Data;
 
 public class NoteClick : MonoBehaviour
 {
@@ -20,12 +21,21 @@ public class NoteClick : MonoBehaviour
 
     [SerializeField] private float distanceLimit = 2.0f;
 
+    [SerializeField] private GameObject judmentLineAbove;
+    [SerializeField] private GameObject judmentLineBellow;
+    [SerializeField] private GameObject judmentLineLeft;
+    [SerializeField] private GameObject judmentLineRight;
+
     private InputAction clickAboveAction;
     private InputAction clickBellowAtion;
     private InputAction clickLeftAtion;
     private InputAction clickRightAtion;
 
     [SerializeField] private GameObject scoresGroup;
+
+    [SerializeField] private GameObject clickedNoteFeedback;
+
+    public SoNoteTypes noteTypes;
 
     private void OnEnable()
     {
@@ -53,7 +63,7 @@ public class NoteClick : MonoBehaviour
 
         clickRightAtion = InputManager.Instance.GetClickRightAction();
         clickRightAtion.Enable();
-        clickRightAtion.performed += ClickRight;
+        clickRightAtion.performed += ClickRight;  
     }
 
     private void OnDestroy()
@@ -73,8 +83,15 @@ public class NoteClick : MonoBehaviour
         GameManager.Instance.OnNoteMiss -= NoteMiss;
     }
 
-    private void NoteSuccess(GameObject noteGroup)
+    private void NoteSuccess(GameObject noteGroup, Vector2 targetPos)
     {
+        var notePosition = noteGroup.transform.position;
+
+        var feedbackNote = Instantiate(clickedNoteFeedback, notePosition, Quaternion.identity);
+        feedbackNote.transform.position = notePosition;
+
+        feedbackNote.GetComponent<ClickedNoteFeedback>().EnableNote(targetPos);
+
         Destroy(noteGroup);
 
         GameManager.Instance.ApplyPulse();
@@ -99,6 +116,7 @@ public class NoteClick : MonoBehaviour
 
     private void ClickAbove(InputAction.CallbackContext context)
     {
+        judmentLineAbove.GetComponent<PulseController>().Pulse();
 
         if (noteGroupAbove.transform.childCount == 0)
         {
@@ -109,7 +127,7 @@ public class NoteClick : MonoBehaviour
 
         if(distance <= distanceLimit)
         {
-            NoteSuccess(noteGroupAbove.transform.GetChild(0).gameObject);
+            NoteSuccess(noteGroupAbove.transform.GetChild(0).gameObject, noteTypes.aboveData.targetLocation);
         }
         else
         {
@@ -119,6 +137,8 @@ public class NoteClick : MonoBehaviour
 
     private void ClickBellow(InputAction.CallbackContext context)
     {
+        //judmentLineBellow.GetComponent<PulseController>().Pulse();
+
         if (noteGroupBellow.transform.childCount == 0)
         {
             return;
@@ -128,7 +148,7 @@ public class NoteClick : MonoBehaviour
 
         if (distance <= distanceLimit)
         {
-            NoteSuccess(noteGroupBellow.transform.GetChild(0).gameObject);
+            NoteSuccess(noteGroupBellow.transform.GetChild(0).gameObject, noteTypes.bellowData.targetLocation);
         }
         else
         {
@@ -138,6 +158,7 @@ public class NoteClick : MonoBehaviour
 
     private void ClickLeft(InputAction.CallbackContext context) 
     {
+        //judmentLineLeft.GetComponent<PulseController>().Pulse();
 
         if (noteGroupLeft.transform.childCount == 0)
         {
@@ -148,7 +169,7 @@ public class NoteClick : MonoBehaviour
 
         if (distance <= distanceLimit)
         {
-            NoteSuccess(noteGroupLeft.transform.GetChild(0).gameObject);
+            NoteSuccess(noteGroupLeft.transform.GetChild(0).gameObject, noteTypes.leftData.targetLocation);
         }
         else
         {
@@ -158,6 +179,8 @@ public class NoteClick : MonoBehaviour
 
     private void ClickRight(InputAction.CallbackContext context)
     {
+        //judmentLineRight.GetComponent<PulseController>().Pulse();
+
         if (noteGroupRight.transform.childCount == 0)
         {
             return;
@@ -167,7 +190,7 @@ public class NoteClick : MonoBehaviour
 
         if (distance <= distanceLimit)
         {
-            NoteSuccess(noteGroupRight.transform.GetChild(0).gameObject);
+            NoteSuccess(noteGroupRight.transform.GetChild(0).gameObject, noteTypes.rightData.targetLocation);
 
         }
         else

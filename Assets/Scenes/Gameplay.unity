@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseType: 0
-  pulseOnBeat: 0
+  pulseOnBeat: 1
   rectTransform: {fileID: 153833733}
   startingScale: {x: 0, y: 0, z: 0}
 --- !u!1 &275799393
@@ -454,7 +454,13 @@ MonoBehaviour:
   myComboText: {fileID: 1693639244}
   myMultiplierText: {fileID: 1980021028}
   distanceLimit: 0.75
+  judmentLineAbove: {fileID: 1374429848}
+  judmentLineBellow: {fileID: 668186007}
+  judmentLineLeft: {fileID: 1395380126}
+  judmentLineRight: {fileID: 949331082}
   scoresGroup: {fileID: 93095448}
+  clickedNoteFeedback: {fileID: 1342340555162862810, guid: e1a6cc6c7495746579ee31f02a0dcfeb, type: 3}
+  noteTypes: {fileID: 11400000, guid: 852da8564020f4f8fa52a945280f0028, type: 2}
 --- !u!4 &279404083
 Transform:
   m_ObjectHideFlags: 0
@@ -1274,8 +1280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b56b0ae293c409499e11bd5f14450f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pulseType: 0
-  pulseOnBeat: 1
+  pulseType: 1
+  pulseOnBeat: 0
   rectTransform: {fileID: 0}
   startingScale: {x: 0, y: 0, z: 0}
 --- !u!1 &777584692
@@ -1533,8 +1539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b56b0ae293c409499e11bd5f14450f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pulseType: 0
-  pulseOnBeat: 1
+  pulseType: 1
+  pulseOnBeat: 0
   rectTransform: {fileID: 0}
   startingScale: {x: 0, y: 0, z: 0}
 --- !u!1 &976787299
@@ -2434,8 +2440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b56b0ae293c409499e11bd5f14450f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pulseType: 0
-  pulseOnBeat: 1
+  pulseType: 1
+  pulseOnBeat: 0
   rectTransform: {fileID: 0}
   startingScale: {x: 0, y: 0, z: 0}
 --- !u!1 &1395380126
@@ -2538,8 +2544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b56b0ae293c409499e11bd5f14450f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pulseType: 0
-  pulseOnBeat: 1
+  pulseType: 1
+  pulseOnBeat: 0
   rectTransform: {fileID: 0}
   startingScale: {x: 0, y: 0, z: 0}
 --- !u!1 &1418539665

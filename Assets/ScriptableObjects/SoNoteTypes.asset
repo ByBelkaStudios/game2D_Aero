@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c8dd043437f4b2c81bf3eb82df398c, type: 3}
+  m_Name: SoNoteTypes
+  m_EditorClassIdentifier: 
+  aboveData: {fileID: 11400000, guid: ef0d819d2a243440aaa8478161eafe4f, type: 2}
+  bellowData: {fileID: 11400000, guid: c76205126d09e442bb1f1726b736b496, type: 2}
+  leftData: {fileID: 11400000, guid: ddc4c486cd1744267ac74a2c8e36e2da, type: 2}
+  rightData: {fileID: 11400000, guid: 8ffe335741f28441fa0cdf06dacc77de, type: 2}
