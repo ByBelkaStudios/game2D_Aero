@@ -137,7 +137,7 @@ public class NoteClick : MonoBehaviour
 
     private void ClickBellow(InputAction.CallbackContext context)
     {
-        //judmentLineBellow.GetComponent<PulseController>().Pulse();
+        judmentLineBellow.GetComponent<PulseController>().Pulse();
 
         if (noteGroupBellow.transform.childCount == 0)
         {
@@ -158,7 +158,7 @@ public class NoteClick : MonoBehaviour
 
     private void ClickLeft(InputAction.CallbackContext context) 
     {
-        //judmentLineLeft.GetComponent<PulseController>().Pulse();
+        judmentLineLeft.GetComponent<PulseController>().Pulse();
 
         if (noteGroupLeft.transform.childCount == 0)
         {
@@ -179,7 +179,7 @@ public class NoteClick : MonoBehaviour
 
     private void ClickRight(InputAction.CallbackContext context)
     {
-        //judmentLineRight.GetComponent<PulseController>().Pulse();
+        judmentLineRight.GetComponent<PulseController>().Pulse();
 
         if (noteGroupRight.transform.childCount == 0)
         {
