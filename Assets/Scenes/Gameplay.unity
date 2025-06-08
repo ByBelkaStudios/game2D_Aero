@@ -1285,7 +1285,7 @@ MonoBehaviour:
   pulseType: 1
   pulseOnBeat: 0
   rectTransform: {fileID: 0}
-  pulseDecayScale: 5
+  pulseDecayScale: 10
   pulseScale: 1.5
   maximumPulseScale: 4
 --- !u!1 &777584692
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   pulseType: 1
   pulseOnBeat: 0
   rectTransform: {fileID: 0}
-  pulseDecayScale: 5
+  pulseDecayScale: 10
   pulseScale: 1.5
   maximumPulseScale: 4
 --- !u!1 &976787299
@@ -2449,7 +2449,7 @@ MonoBehaviour:
   pulseType: 1
   pulseOnBeat: 0
   rectTransform: {fileID: 0}
-  pulseDecayScale: 5
+  pulseDecayScale: 10
   pulseScale: 1.5
   maximumPulseScale: 4
 --- !u!1 &1395380126
@@ -2555,7 +2555,7 @@ MonoBehaviour:
   pulseType: 1
   pulseOnBeat: 0
   rectTransform: {fileID: 0}
-  pulseDecayScale: 5
+  pulseDecayScale: 10
   pulseScale: 1.5
   maximumPulseScale: 4
 --- !u!1 &1418539665
@@ -2945,9 +2945,6 @@ MonoBehaviour:
   healthBar: {fileID: 1189808634}
   noteSuccessSound: {fileID: 1782091694}
   noteMissSound: {fileID: 1782091693}
-  decayScale: 5
-  pulseScale: 1.2
-  maximumScale: 6
   listener: {fileID: 93095451}
   score: 0
   combo: 0
