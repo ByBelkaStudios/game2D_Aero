@@ -30,7 +30,7 @@ public class HealthBar : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            GameManager.Instance.LoadScene("StartMenu");
+            GameManager.Instance.LoadScene("Desktop");
             return;
         }
         currentHealth -= healthDecreace;

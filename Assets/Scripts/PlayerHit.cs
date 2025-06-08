@@ -2,27 +2,14 @@ using UnityEngine;
 
 public class PlayerHit : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        GameManager.Instance.OnNoteMiss += OnPlayerHit;
-    }
-
-    private void OnDisable()
-    {
-        GameManager.Instance.OnNoteMiss -= OnPlayerHit;
-    }
-
-    private void OnDestroy()
-    {
-        GameManager.Instance.OnNoteMiss -= OnPlayerHit;
-    }
-
     private void OnPlayerHit()
     {
         GameManager.Instance.HealthBar.DecreaseHealth();
 
         GameManager.Instance.ApplyImpulse();
         GameManager.Instance.ResetCombo();
+
+        GameManager.Instance.InvokeOnHitTaken();
 
         GameManager.Instance.MissNoteSound.Play();
     }

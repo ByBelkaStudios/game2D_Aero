@@ -81,7 +81,7 @@ public class NoteSpawner : MonoBehaviour
     private void ReturnMenu()
     {
         GameManager.Instance.gamedata.ResetSong();
-        GameManager.Instance.LoadScene("StartMenu");
+        GameManager.Instance.LoadScene("Desktop");
     }
 
     private void SpawnAbove()

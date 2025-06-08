@@ -12,7 +12,7 @@ public class WindowData
     [SerializeField] private GameObject windowGameObject;
     [SerializeField] private TMP_Text windowSongName;
     
-    public Button easy, medium, hard;
+    public Button easy, medium, hard, Play;
     
     public GameObject WindowGameObject => windowGameObject;
     public TMP_Text WindowSongName => windowSongName;
@@ -54,6 +54,7 @@ public class SongSelector : MonoBehaviour
         windowData.easy.onClick.RemoveAllListeners();
         windowData.medium.onClick.RemoveAllListeners();
         windowData.hard.onClick.RemoveAllListeners();
+        windowData.Play.onClick.RemoveAllListeners();
 
         windowData.easy.onClick.AddListener(() =>
         {
@@ -69,6 +70,11 @@ public class SongSelector : MonoBehaviour
         windowData.hard.onClick.AddListener(() =>
         {
             SelectDifficulty(entry, 3);
+        });
+
+        windowData.Play.onClick.AddListener(() =>
+        {
+            Play();
         });
         
         windowData.WindowSongName.text = entry.songName;

@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public event Action OnNoteSuccess;
     public event Action OnUIUpdate;
     public event Action OnNoteMiss;
+    public event Action OnHitTaken;
     public event Action OnHealthChanged;
     public event Action OnSongBeat;
 
@@ -87,6 +88,11 @@ public class GameManager : MonoBehaviour
     public void InvokeOnHealthChange()
     {
         OnHealthChanged?.Invoke();
+    }
+
+    public void InvokeOnHitTaken()
+    {
+        OnHitTaken?.Invoke();
     }
 
     public void IncrementScore(int hit)
