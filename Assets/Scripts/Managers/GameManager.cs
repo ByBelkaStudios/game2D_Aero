@@ -14,9 +14,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource noteSuccessSound;
     [SerializeField] private AudioSource noteMissSound;
 
-    [SerializeField] private float decayScale = 5.0f;
-    [SerializeField] private float pulseScale = 1.05f;
-    [SerializeField] private float maximumScale = 2.0f;
     [SerializeField] private CinemachineImpulseSource listener;
 
     [SerializeField] private int score = 0;
@@ -34,9 +31,6 @@ public class GameManager : MonoBehaviour
     public AudioSource MissNoteSound => noteMissSound;
 
     public HealthBar HealthBar => healthBar;
-    public float DecayScale { get => decayScale; set => decayScale = value; }
-    public float PulseScale { get => pulseScale; set => pulseScale = value; }
-    public float MaximumScale {get => maximumScale; set => maximumScale = value; }
 
     public float Multiplier { get => scoreMultiplier; set => scoreMultiplier = value; }
     public int Combo { get => combo; set => combo = value; }

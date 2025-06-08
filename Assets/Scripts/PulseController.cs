@@ -14,9 +14,14 @@ public class PulseController : MonoBehaviour
 
     [SerializeField] private RectTransform rectTransform;
 
-    [SerializeField] private Vector3 startingScale;
+    [SerializeField] private float pulseDecayScale = 5.0f;
+    [SerializeField] private float pulseScale = 1.05f;
+    [SerializeField] private float maximumPulseScale = 2.0f;
+
+    private Vector3 startingScale;
 
     private Transform gameObjectTransform;
+
 
     private void OnEnable()
     {
@@ -50,18 +55,18 @@ public class PulseController : MonoBehaviour
     {
         if(pulseType == EpulseType.UI)
         {
-            rectTransform.localScale = rectTransform.localScale * GameManager.Instance.PulseScale;
-            if (rectTransform.localScale.x > GameManager.Instance.MaximumScale)
+            rectTransform.localScale = rectTransform.localScale * pulseScale;
+            if (rectTransform.localScale.x > maximumPulseScale)
             {
-                rectTransform.localScale = new Vector3(GameManager.Instance.MaximumScale, GameManager.Instance.MaximumScale, GameManager.Instance.MaximumScale);
+                rectTransform.localScale = new Vector3(maximumPulseScale, maximumPulseScale, maximumPulseScale);
             }
             return;
         }
 
-        gameObjectTransform.localScale = gameObjectTransform.localScale * GameManager.Instance.PulseScale;
-        if(gameObjectTransform.localScale.x > GameManager.Instance.MaximumScale)
+        gameObjectTransform.localScale = gameObjectTransform.localScale * pulseScale;
+        if(gameObjectTransform.localScale.x > maximumPulseScale)
         {
-            gameObjectTransform.localScale = new Vector3(GameManager.Instance.MaximumScale, GameManager.Instance.MaximumScale, GameManager.Instance.MaximumScale);
+            gameObjectTransform.localScale = new Vector3(maximumPulseScale, maximumPulseScale, maximumPulseScale);
         }
     }
 
@@ -77,10 +82,10 @@ public class PulseController : MonoBehaviour
     {
         if(pulseType == EpulseType.UI)
         {
-            rectTransform.localScale = Vector3.Lerp(rectTransform.localScale, startingScale, Time.deltaTime * GameManager.Instance.DecayScale);
+            rectTransform.localScale = Vector3.Lerp(rectTransform.localScale, startingScale, Time.deltaTime * pulseDecayScale);
             return;
         }
 
-        gameObjectTransform.localScale = Vector3.Lerp(gameObjectTransform.localScale, startingScale, Time.deltaTime * GameManager.Instance.DecayScale);
+        gameObjectTransform.localScale = Vector3.Lerp(gameObjectTransform.localScale, startingScale, Time.deltaTime * pulseDecayScale);
     }
 }

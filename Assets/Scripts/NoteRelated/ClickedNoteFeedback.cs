@@ -3,13 +3,14 @@ using UnityEngine;
 public class ClickedNoteFeedback : MonoBehaviour
 {
     private bool noteEnabled = false;
-    private float elapsedTime = 0f;
+    private float elapsedTime;
 
     private Vector2 noteTargetPos;
     private Vector2 noteStartPos;
     private Vector2 controlPoint;
 
-    private float lerpTime = 1f;
+    [SerializeField] private float lerpTime = 0.50f;
+    [SerializeField] private float arch = 6f;
 
     public void EnableNote(Vector2 offset)
     {
@@ -17,15 +18,10 @@ public class ClickedNoteFeedback : MonoBehaviour
         noteTargetPos = noteStartPos + offset;
 
         Vector2 midPoint = (noteStartPos + noteTargetPos) / 2f;
-        controlPoint = midPoint + Vector2.up * 6f;
+        controlPoint = midPoint + Vector2.up * arch;
 
         elapsedTime = 0f;
         noteEnabled = true;
-    }
-
-    private void Start()
-    {
-        lerpTime = 0.5f;
     }
 
     private void Update()
