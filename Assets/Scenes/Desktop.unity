@@ -1277,6 +1277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songList:
   - {fileID: 11400000, guid: 1043204affa526741b145e3a00457821, type: 2}
+  - {fileID: 11400000, guid: 4502f2ed474eea747b58b0074005e50e, type: 2}
   - {fileID: 11400000, guid: 80a3f5d567c9ef9498df7d98151f5d2b, type: 2}
   prefabFolder: {fileID: 4597365888662736539, guid: fa03e475823427f4c91cd7bb644b8257, type: 3}
   content: {fileID: 812558879}
