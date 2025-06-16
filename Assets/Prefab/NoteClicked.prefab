@@ -79,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 1451067775
   m_SortingLayer: 2
   m_SortingOrder: 2
-  m_Sprite: {fileID: 297761703447499198, guid: aca8a6e52d5c19e4dbbfe956084c34d0, type: 3}
-  m_Color: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
+  m_Sprite: {fileID: -3820019538812321093, guid: 9ee9e59b62661d54da8b2d77c9f3880d, type: 3}
+  m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -165,5 +165,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ce08bab83444fb39469314ede8caec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRigidBody2D: {fileID: 4433030401991200305}
-  noteTargetPos: {x: 0, y: 0}
+  lerpTime: 0.5
+  arch: 6

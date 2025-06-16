@@ -45,6 +45,11 @@ public class GameManager : MonoBehaviour
 
     public SoGameController gamedata;
 
+    //test
+
+    private float gradeNumber = 0;
+    private float occurenceNumber = 0;
+
     private void Start()
     {
         scoreMultiplier = scoreMultiplerDefault;
@@ -77,7 +82,7 @@ public class GameManager : MonoBehaviour
 
     public void ApplyImpulse()
     {
-        listener.GenerateImpulse();
+        //listener.GenerateImpulse();
     }
 
     public void ApplyPulse()
@@ -92,13 +97,18 @@ public class GameManager : MonoBehaviour
 
     public void InvokeOnHitTaken()
     {
+        //gradeNumber += -1;
+        occurenceNumber++;
         OnHitTaken?.Invoke();
     }
 
     public void IncrementScore(int hit)
     {
+        gradeNumber += 1;
+        occurenceNumber++;
+        Debug.Log("Grade number: " + gradeNumber + " all: " + occurenceNumber + " Grade: " + (gradeNumber / occurenceNumber) * 100);
+
         score = score + (int)MathF.Round(hit * Multiplier * ScoreScale);
-        PlayerPrefs.SetString("score", $"Last Score {score}");
         OnUIUpdate?.Invoke();
     }
 
@@ -118,6 +128,11 @@ public class GameManager : MonoBehaviour
             return;
         }
         scoreMultiplier += scoreMultiplierIncrease;
+    }
+
+    private void OnDisable()
+    {
+        Debug.Log((gradeNumber / occurenceNumber) * 100);
     }
 
 }
