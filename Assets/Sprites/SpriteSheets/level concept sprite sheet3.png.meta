@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: e0435f87e23e2214db1a9e871037af60
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4939126728381428380
+    second: level concept sprite sheet3_0
+  - first:
+      213: 6908394690149879925
+    second: level concept sprite sheet3_1
+  - first:
+      213: 8067464685024739777
+    second: level concept sprite sheet3_2
+  - first:
+      213: -4174997411097220791
+    second: level concept sprite sheet3_3
+  - first:
+      213: 5604823654660380025
+    second: level concept sprite sheet3_4
+  - first:
+      213: -732742248237556488
+    second: level concept sprite sheet3_5
+  - first:
+      213: -1082620773173446032
+    second: level concept sprite sheet3_6
+  - first:
+      213: -4754266260531864855
+    second: level concept sprite sheet3_7
+  - first:
+      213: 4618848090720994617
+    second: level concept sprite sheet3_8
+  - first:
+      213: 1432899518000606478
+    second: level concept sprite sheet3_9
+  - first:
+      213: 1834952039249473377
+    second: level concept sprite sheet3_10
+  - first:
+      213: -9112577868001445973
+    second: level concept sprite sheet3_11
+  - first:
+      213: 3630584731343176372
+    second: level concept sprite sheet3_12
+  - first:
+      213: -3417579772525108021
+    second: level concept sprite sheet3_13
+  - first:
+      213: -2827017144400331414
+    second: level concept sprite sheet3_14
+  - first:
+      213: 6902652063075384194
+    second: level concept sprite sheet3_15
+  - first:
+      213: -3647541120001341417
+    second: level concept sprite sheet3_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: level concept sprite sheet3_0
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1292
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c92ffc1479d4b8440800000000000000
+      internalID: 4939126728381428380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_1
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1299
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57014925e5c8fdf50800000000000000
+      internalID: 6908394690149879925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_2
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1299
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c188e4436465ff60800000000000000
+      internalID: 8067464685024739777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_3
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1299
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949ef5589fd6f06c0800000000000000
+      internalID: -4174997411097220791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_4
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1299
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9751db41b6558cd40800000000000000
+      internalID: 5604823654660380025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_5
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1299
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc11e5bec6c4d5f0800000000000000
+      internalID: -732742248237556488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_6
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1299
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ab98c8422c9f0f0800000000000000
+      internalID: -1082620773173446032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_7
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1299
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea9f557604750eb0800000000000000
+      internalID: -4754266260531864855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1223
+        width: 887
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9358ae6edd1791040800000000000000
+      internalID: 4618848090720994617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_9
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 65
+        width: 1104
+        height: 1081
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d2141158ea2e310800000000000000
+      internalID: 1432899518000606478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_10
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 699
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16fe75f582f077910800000000000000
+      internalID: 1834952039249473377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_11
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 627
+        width: 245
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7ffa5a5be998180800000000000000
+      internalID: -9112577868001445973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_12
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 573
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2caa6d39d626230800000000000000
+      internalID: 3630584731343176372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_13
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 441
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4a413dd415290d0800000000000000
+      internalID: -3417579772525108021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_14
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 282
+        width: 286
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d3416a2ea64c8d0800000000000000
+      internalID: -2827017144400331414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_15
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 93
+        width: 123
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28bb9b3ca752bcf50800000000000000
+      internalID: 6902652063075384194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level concept sprite sheet3_16
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 58
+        width: 365
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71880b64da4516dc0800000000000000
+      internalID: -3647541120001341417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      level concept sprite sheet3_0: 4939126728381428380
+      level concept sprite sheet3_1: 6908394690149879925
+      level concept sprite sheet3_10: 1834952039249473377
+      level concept sprite sheet3_11: -9112577868001445973
+      level concept sprite sheet3_12: 3630584731343176372
+      level concept sprite sheet3_13: -3417579772525108021
+      level concept sprite sheet3_14: -2827017144400331414
+      level concept sprite sheet3_15: 6902652063075384194
+      level concept sprite sheet3_16: -3647541120001341417
+      level concept sprite sheet3_2: 8067464685024739777
+      level concept sprite sheet3_3: -4174997411097220791
+      level concept sprite sheet3_4: 5604823654660380025
+      level concept sprite sheet3_5: -732742248237556488
+      level concept sprite sheet3_6: -1082620773173446032
+      level concept sprite sheet3_7: -4754266260531864855
+      level concept sprite sheet3_8: 4618848090720994617
+      level concept sprite sheet3_9: 1432899518000606478
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

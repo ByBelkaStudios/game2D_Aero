@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 9ee9e59b62661d54da8b2d77c9f3880d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4188991802026616229
+    second: level sprite sheet_0
+  - first:
+      213: 5112337484266665506
+    second: level sprite sheet_1
+  - first:
+      213: -381695802178981489
+    second: level sprite sheet_2
+  - first:
+      213: -3245667425522064628
+    second: level sprite sheet_3
+  - first:
+      213: -2884158022703651199
+    second: level sprite sheet_4
+  - first:
+      213: -608490583064385959
+    second: level sprite sheet_5
+  - first:
+      213: 4044219841014290822
+    second: level sprite sheet_6
+  - first:
+      213: 2013737659556746340
+    second: level sprite sheet_7
+  - first:
+      213: 7803076228189566052
+    second: level sprite sheet_8
+  - first:
+      213: -6338729821092042122
+    second: level sprite sheet_9
+  - first:
+      213: 5456295167164489016
+    second: level sprite sheet_10
+  - first:
+      213: -1787865718997564244
+    second: level sprite sheet_11
+  - first:
+      213: -6912349918761501921
+    second: level sprite sheet_12
+  - first:
+      213: -3820019538812321093
+    second: level sprite sheet_13
+  - first:
+      213: 288073571752544831
+    second: level sprite sheet_14
+  - first:
+      213: -993797119334465371
+    second: level sprite sheet_15
+  - first:
+      213: 4929406349975964252
+    second: level sprite sheet_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: level sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1292
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5e1d689d9422a30800000000000000
+      internalID: 4188991802026616229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1299
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226f0a90bdba2f640800000000000000
+      internalID: 5112337484266665506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1299
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f813dd2b0b1f3baf0800000000000000
+      internalID: -381695802178981489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1299
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0363ba3ca215f2d0800000000000000
+      internalID: -3245667425522064628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1299
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186e7ac2f8969f7d0800000000000000
+      internalID: -2884158022703651199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1299
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956e643e9053e87f0800000000000000
+      internalID: -608490583064385959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1299
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6895e39a484ff1830800000000000000
+      internalID: 4044219841014290822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1299
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464d4bc6bbb32fb10800000000000000
+      internalID: 2013737659556746340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1223
+        width: 887
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464b880bc781a4c60800000000000000
+      internalID: 7803076228189566052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 46
+        width: 1130
+        height: 1109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67a22aecfce4808a0800000000000000
+      internalID: -6338729821092042122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 699
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d158cbb87a8bb40800000000000000
+      internalID: 5456295167164489016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 627
+        width: 245
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca44d01e9993037e0800000000000000
+      internalID: -1787865718997564244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 573
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b35014f566210a0800000000000000
+      internalID: -6912349918761501921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 441
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb24a0208709cfac0800000000000000
+      internalID: -3820019538812321093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 282
+        width: 286
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a0d7123617ff300800000000000000
+      internalID: 288073571752544831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 93
+        width: 123
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a0434b09c25532f0800000000000000
+      internalID: -993797119334465371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 58
+        width: 365
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a4fdb45f4c86440800000000000000
+      internalID: 4929406349975964252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      level sprite sheet_0: 4188991802026616229
+      level sprite sheet_1: 5112337484266665506
+      level sprite sheet_10: 5456295167164489016
+      level sprite sheet_11: -1787865718997564244
+      level sprite sheet_12: -6912349918761501921
+      level sprite sheet_13: -3820019538812321093
+      level sprite sheet_14: 288073571752544831
+      level sprite sheet_15: -993797119334465371
+      level sprite sheet_16: 4929406349975964252
+      level sprite sheet_2: -381695802178981489
+      level sprite sheet_3: -3245667425522064628
+      level sprite sheet_4: -2884158022703651199
+      level sprite sheet_5: -608490583064385959
+      level sprite sheet_6: 4044219841014290822
+      level sprite sheet_7: 2013737659556746340
+      level sprite sheet_8: 7803076228189566052
+      level sprite sheet_9: -6338729821092042122
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

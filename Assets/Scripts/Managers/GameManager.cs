@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public event Action OnHitTaken;
     public event Action OnHealthChanged;
     public event Action OnSongBeat;
+    public event Action OnSongEnd;
 
     public AudioSource SuccessNoteSound => noteSuccessSound;
     public AudioSource MissNoteSound => noteMissSound;
@@ -97,16 +98,32 @@ public class GameManager : MonoBehaviour
 
     public void InvokeOnHitTaken()
     {
-        //gradeNumber += -1;
         occurenceNumber++;
         OnHitTaken?.Invoke();
+    }
+
+    public void InvokeSongEnd(bool dnf)
+    {
+        //if dnf show score but do not store it
+
+        //otherwise show the score normally.
+
+        if(dnf == true)
+        {
+            gamedata.currentSongData.grade = 0f;
+        }
+        else
+        {
+            gamedata.currentSongData.grade = Mathf.Round((gradeNumber / occurenceNumber) * 100);
+        }
+
+        OnSongEnd?.Invoke();
     }
 
     public void IncrementScore(int hit)
     {
         gradeNumber += 1;
         occurenceNumber++;
-        Debug.Log("Grade number: " + gradeNumber + " all: " + occurenceNumber + " Grade: " + (gradeNumber / occurenceNumber) * 100);
 
         score = score + (int)MathF.Round(hit * Multiplier * ScoreScale);
         OnUIUpdate?.Invoke();

@@ -30,7 +30,11 @@ public class HealthBar : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            GameManager.Instance.LoadScene("Desktop");
+            GameManager.Instance.InvokeSongEnd(true);
+
+            // -- Old would return to desktop
+            //GameManager.Instance.LoadScene("Desktop");
+
             return;
         }
         currentHealth -= healthDecreace;

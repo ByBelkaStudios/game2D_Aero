@@ -145,10 +145,14 @@ public class NoteSpawner : MonoBehaviour
             {
                 Debug.Log("Beatmap ended at step: " + chartStepToRead + ", song will be stopped");
                 songPlaying = false;
-                ReturnMenu();
 
-                songdata.scoreLeaderboard.Add(GameManager.Instance.Score);
-                Debug.Log(songdata.scoreLeaderboard[0]);
+                GameManager.Instance.InvokeSongEnd(false);
+
+                // -- old would return to the menu - game manager adds score
+                //ReturnMenu();
+
+                //songdata.scoreLeaderboard.Add(GameManager.Instance.Score);
+                //Debug.Log(songdata.scoreLeaderboard[0]);
 
                 return;
             }
