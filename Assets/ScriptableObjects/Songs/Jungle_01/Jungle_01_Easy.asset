@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931060423224c4e07b7aed10388862c8, type: 3}
   m_Name: Jungle_01_Easy
   m_EditorClassIdentifier: 
-  score: 0
   scoreLeaderboard: 
+  grade: 0
   chartFile: {fileID: 4900000, guid: 9b42abf6324f83f4eafea87c5a98e3cb, type: 3}
   stepSubdivision: 8
-  songName: Jungle_01
-  songAuthor: Debrikalis
-  songAudioFile: {fileID: 8300000, guid: 82b474b3a307f0d42bf2a49b80a0e19b, type: 3}
+  songAudioFile: {fileID: 8300000, guid: ad2d063344400a743bf0f099be7752f3, type: 3}
   bpm: 128
   songDifficulty: 0

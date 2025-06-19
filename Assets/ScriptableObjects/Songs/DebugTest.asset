@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931060423224c4e07b7aed10388862c8, type: 3}
   m_Name: DebugTest
   m_EditorClassIdentifier: 
-  score: 0
   scoreLeaderboard: 
+  grade: 0
   chartFile: {fileID: 4900000, guid: ab845d3f70d71420b9c7dabf393c135e, type: 3}
   stepSubdivision: 8
-  songName: DebugTest
-  songAuthor: DebugTest
-  songAudioFile: {fileID: 8300000, guid: fa44ff6e978c944448d20d437a2f326d, type: 3}
+  songAudioFile: {fileID: 8300000, guid: aa1cfec46c7d55043bf582e157571f07, type: 3}
   bpm: 60
   songDifficulty: 2
