@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text myScoreText;
     [SerializeField] private TMP_Text myComboText;
+    [SerializeField] private TMP_Text myMulText;
 
     [SerializeField] private Slider slider;
     [SerializeField] private PulseController scorePulse;
@@ -46,9 +47,11 @@ public class UIManager : MonoBehaviour
     {
         string formatted = GameManager.Instance.Score.ToString().PadRight(7, '0');
         string combo = GameManager.Instance.Combo.ToString().PadRight(3, '0');
+        float mul = Mathf.Round(GameManager.Instance.Multiplier);
 
         myScoreText.text = formatted;
         myComboText.text = combo;
+        myMulText.text = mul.ToString();
     }
 
     private void Start()
