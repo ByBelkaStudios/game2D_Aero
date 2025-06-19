@@ -86,7 +86,7 @@ public class NoteSpawner : MonoBehaviour
 
     private void SpawnAbove()
     {
-        var noteSpawnLocation = new Vector2(0, targetPositionAbove.position.y + trackLength);
+        var noteSpawnLocation = new Vector2(targetPositionAbove.position.x, targetPositionAbove.position.y + trackLength);
 
         var songOffset = myAudioSource.time % stepDuration;
         var note = Instantiate(notePrefab, noteSpawnLocation, Quaternion.identity, noteGroupAbove.transform);
@@ -96,7 +96,7 @@ public class NoteSpawner : MonoBehaviour
 
     private void SpawnBellow()
     {
-        var noteSpawnLocation = new Vector2(0, targetPositionBellow.position.y - trackLength);
+        var noteSpawnLocation = new Vector2(targetPositionBellow.position.x, targetPositionBellow.position.y - trackLength);
 
         var songOffset = myAudioSource.time % stepDuration;
         var note = Instantiate(notePrefab, noteSpawnLocation, Quaternion.identity, noteGroupBellow.transform);
@@ -106,7 +106,7 @@ public class NoteSpawner : MonoBehaviour
 
     private void SpawnLeft()
     {
-        var noteSpawnLocation = new Vector2(targetPositionLeft.position.x - trackLength, 0);
+        var noteSpawnLocation = new Vector2(targetPositionLeft.position.x - trackLength, targetPositionLeft.position.y);
 
         var songOffset = myAudioSource.time % stepDuration;
         var note = Instantiate(notePrefab, noteSpawnLocation, Quaternion.identity, noteGroupLeft.transform);
@@ -116,7 +116,7 @@ public class NoteSpawner : MonoBehaviour
 
     private void SpawnRight()
     {
-        var noteSpawnLocation = new Vector2(targetPositionRight.position.x + trackLength, 0);
+        var noteSpawnLocation = new Vector2(targetPositionRight.position.x + trackLength, targetPositionRight.position.y);
 
         var songOffset = myAudioSource.time % stepDuration;
         var note = Instantiate(notePrefab, noteSpawnLocation, Quaternion.identity, noteGroupRight.transform);
