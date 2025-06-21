@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Jungle_01_Med
   m_EditorClassIdentifier: 
   scoreLeaderboard: 
-  grade: 0
+  grade: 76
   chartFile: {fileID: 4900000, guid: 7e2ed74382a85da438416ba2ceee6c2b, type: 3}
   stepSubdivision: 8
   songAudioFile: {fileID: 8300000, guid: ad2d063344400a743bf0f099be7752f3, type: 3}
-  bpm: 128
+  bpm: 168
   songDifficulty: 1

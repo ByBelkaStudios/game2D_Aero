@@ -572,7 +572,7 @@ MonoBehaviour:
   myScoreText: {fileID: 1152318139}
   myComboText: {fileID: 0}
   myMultiplierText: {fileID: 0}
-  distanceLimit: 0.75
+  distanceLimit: 1
   judmentLineAbove: {fileID: 182754662}
   judmentLineBellow: {fileID: 435574723}
   judmentLineLeft: {fileID: 1199794388}
@@ -3019,8 +3019,8 @@ MonoBehaviour:
   targetPositionBellow: {fileID: 554526316}
   targetPositionLeft: {fileID: 1270029096}
   targetPositionRight: {fileID: 1070258339}
-  trackLength: 4
-  songdata: {fileID: 11400000, guid: 2f493c36cc29a4e6f8faac7574385c84, type: 2}
+  trackLength: 2
+  songdata: {fileID: 11400000, guid: 105313eee2553be4a9f5ba7c95411cd5, type: 2}
 --- !u!4 &1122185855
 Transform:
   m_ObjectHideFlags: 0
