@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gameplay window interior sprite sheet_0: 1984593575058698962
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

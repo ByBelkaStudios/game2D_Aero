@@ -17,5 +17,5 @@ MonoBehaviour:
   chartFile: {fileID: 4900000, guid: 9b42abf6324f83f4eafea87c5a98e3cb, type: 3}
   stepSubdivision: 8
   songAudioFile: {fileID: 8300000, guid: ad2d063344400a743bf0f099be7752f3, type: 3}
-  bpm: 128
+  bpm: 168
   songDifficulty: 0
